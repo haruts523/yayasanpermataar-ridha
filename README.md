@@ -1,1 +1,0 @@
-# yayasanpermataar-ridha
