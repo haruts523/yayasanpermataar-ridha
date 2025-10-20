@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yayasan Permata Ar-Ridha</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.svg" alt="Logo Yayasan Permata Ar-Ridha" class="logo-img" />
+        <div class="brand-text">
+          <h1>Yayasan Permata Ar-Ridha</h1>
+          <p class="tagline">Tebar Kebaikan Bersama Yayasan Permata Ar-Ridha</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="donasi.html">Donasi</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="akun.html">Akun</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero banner">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h2 class="reveal">Tebar Kebaikan Bersama<br><span class="accent">Yayasan Permata Ar-Ridha</span></h2>
+          <p class="lead reveal">Mari bersama membangun harapan melalui aksi nyata — donasi, zakat, dan program sosial.</p>
+          <p class="cta-row reveal"><a class="btn btn-primary" href="donasi.html">Donasi</a></p>
+        </div>
+        <div class="hero-visual reveal">
+          <svg class="mosque" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#0f6b3c"/>
+                <stop offset="1" stop-color="#eafdf6"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="400" fill="url(#grad)" />
+            <g transform="translate(60,60)" fill="#fff" opacity="0.95">
+              <path d="M220 20c-40 0-72 32-72 72 0 56 100 112 108 176 8-64 108-120 108-176 0-40-32-72-72-72-22 0-40 8-44 18-4-10-22-18-48-18z" />
+              <rect x="40" y="140" rx="8" ry="8" width="380" height="160" />
+              <path d="M190 0 L240 40 L290 0 Z" transform="translate(60,40)" />
+            </g>
+            <g class="clouds" fill="#ffffff" opacity="0.9">
+              <ellipse cx="120" cy="60" rx="60" ry="18"/>
+              <ellipse cx="320" cy="40" rx="80" ry="22"/>
+              <ellipse cx="480" cy="70" rx="50" ry="14"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature card reveal">
+        <h3>Donasi & Berita</h3>
+        <p>Publikasikan kegiatan donasi dan update program yayasan secara transparan.</p>
+      </div>
+      <div class="feature card reveal">
+        <h3>Inbox Publik</h3>
+        <p>Bagikan pesan dan kabar untuk komunitas — semua pengunjung bisa melihatnya.</p>
+      </div>
+      <div class="feature card reveal">
+        <h3>Akun Terdaftar</h3>
+        <p>Hanya akun berizin yang dapat memposting berita/foto. Daftar mudah dan aman.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Yayasan Permata Ar-Ridha – Bersama Menebar Kebaikan</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
