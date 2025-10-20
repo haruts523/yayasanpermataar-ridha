@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akun — Yayasan Permata Ar-Ridha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-circle">YA</div>
+        <div>
+          <h1>Yayasan Permata Ar‑Riḍha</h1>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="donasi.html">Donasi & Berita</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="akun.html" class="active">Akun</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card auth">
+      <div class="auth-panels">
+        <div class="panel">
+          <h2>Masuk</h2>
+          <form id="loginForm">
+            <label>Email
+              <input type="email" id="loginEmail" placeholder="email@contoh.com" required>
+            </label>
+            <label>Password
+              <input type="password" id="loginPassword" required>
+            </label>
+            <div class="form-actions">
+              <button class="btn" type="submit">Masuk</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h2>Daftar</h2>
+          <form id="registerForm">
+            <label>Nama Lengkap
+              <input type="text" id="regName" required>
+            </label>
+            <label>Email
+              <input type="email" id="regEmail" required>
+            </label>
+            <label>Password
+              <input type="password" id="regPassword" required>
+            </label>
+            <label class="small">
+              <input type="checkbox" id="regCanPost"> Beri izin untuk memposting berita/foto (hanya berikan jika benar-benar perlu)
+            </label>
+            <div class="form-actions">
+              <button class="btn" type="submit">Daftar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card your-account hidden" id="accountBox">
+        <h3>Akun Anda</h3>
+        <p id="acctName"></p>
+        <p id="acctEmail"></p>
+        <p id="acctRole"></p>
+        <div class="form-actions">
+          <button class="btn" id="btnLogout">Keluar</button>
+        </div>
+      </div>
+
+      <div id="regHint" class="muted">Catatan: Untuk keamanan produksi gunakan Firebase Authentication & server-side rules. Saat ini demo menggunakan koleksi `users` pada Firestore.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> Yayasan Permata Ar‑Riḍha</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

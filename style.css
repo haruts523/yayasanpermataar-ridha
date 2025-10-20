@@ -1,0 +1,120 @@
+/* Style untuk Yayasan Permata Ar-Ridha
+   Warna utama: Hijau kubah Nabawi #178A4A
+*/
+:root{
+  --primary: #178A4A;
+  --muted: #6b7280;
+  --bg: #f7fbf8;
+  --card: #ffffff;
+  --accent: #0b3a2b;
+  --radius: 12px;
+  --maxw: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg, #f0fbf6 0%, var(--bg) 100%);
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container */
+.container{
+  width:92%;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:28px 0;
+}
+
+/* Header */
+.site-header{
+  background:var(--card);
+  box-shadow:0 6px 20px rgba(23,138,74,0.06);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{display:flex;gap:14px;align-items:center}
+.logo-circle{
+  width:56px;height:56px;border-radius:10px;
+  background:linear-gradient(180deg,var(--primary), #106b3a);
+  color:white;display:flex;align-items:center;justify-content:center;font-weight:700;
+  font-size:18px;box-shadow:0 6px 18px rgba(23,138,74,0.18);
+}
+.brand h1{margin:0;font-size:18px}
+.tagline{margin:0;color:var(--muted);font-size:13px}
+
+/* Nav */
+.main-nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+.main-nav a.active{color:var(--primary)}
+.main-nav a:hover{color:var(--primary)}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 250px;
+  gap:24px;
+  align-items:center;
+  margin-top:22px;
+}
+.hero-content h2{margin:0;font-size:26px}
+.lead{color:var(--muted);margin-top:8px}
+.cta-row{margin-top:14px}
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:10px;background:var(--primary);
+  color:white;text-decoration:none;font-weight:700;border:none;cursor:pointer;
+}
+.btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary);padding:8px 14px}
+
+/* Cards & sections */
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 20px rgba(10,20,30,0.04);margin-top:18px}
+.stat{display:flex;flex-direction:column;align-items:center;padding:18px}
+.stat-number{font-size:20px;font-weight:800;color:var(--primary)}
+.features{display:flex;gap:16px;margin-top:18px}
+.feature{flex:1}
+
+.posts{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.post{
+  display:flex;gap:14px;align-items:flex-start;padding:12px;border-radius:10px;border:1px solid #eef6f1;background:linear-gradient(180deg,#ffffff,#fbfffe);
+}
+.post img{width:160px;height:100px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.post .meta{flex:1}
+.post h4{margin:0 0 6px 0}
+.post p{margin:0;color:var(--muted)}
+
+/* Forms */
+label{display:block;margin-top:10px;font-weight:600}
+input[type="text"], input[type="email"], input[type="password"], textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6eee8;margin-top:6px;outline:none;
+}
+.form-actions{margin-top:12px;display:flex;gap:10px;align-items:center}
+.small{font-weight:400;color:var(--muted);font-size:13px}
+.muted{color:var(--muted);font-size:13px;margin-top:12px}
+
+/* Alerts */
+.alert{padding:12px;border-radius:8px;background:#fff3e0;color:#7a4b00;border:1px solid #ffecb5}
+
+/* Auth layout */
+.auth-panels{display:flex;gap:14px}
+.auth-panels .panel{flex:1}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr; padding-bottom:0}
+  .features{flex-direction:column}
+  .auth-panels{flex-direction:column}
+  .main-nav{display:none}
+}
+
+/* Footer */
+.site-footer{padding:20px 0;text-align:center;color:var(--muted);margin-top:28px}

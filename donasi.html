@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donasi & Berita — Yayasan Permata Ar-Ridha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-circle">YA</div>
+        <div>
+          <h1>Yayasan Permata Ar‑Riḍha</h1>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="donasi.html" class="active">Donasi & Berita</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="akun.html">Akun</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Donasi & Berita</h2>
+      <p class="lead">Di sini terbitkan berita kegiatan donasi atau upload foto kegiatan. Hanya pengguna terdaftar dengan izin posting yang dapat mengunggah.</p>
+
+      <div id="alert" class="alert" hidden></div>
+
+      <div id="uploaderArea" class="uploader card hidden">
+        <h3>Buat Post Baru</h3>
+        <form id="postForm">
+          <label>Judul
+            <input type="text" id="postTitle" placeholder="Judul berita" required>
+          </label>
+          <label>Gambar
+            <input type="file" id="postImage" accept="image/*" required>
+          </label>
+          <label>Deskripsi
+            <textarea id="postDesc" rows="5" placeholder="Deskripsi singkat..." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn" type="submit">Publikasikan</button>
+            <button type="button" id="btnCancel" class="btn btn-outline">Batal</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="posts" id="postsContainer">
+        <!-- posts injected here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> Yayasan Permata Ar‑Riḍha</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

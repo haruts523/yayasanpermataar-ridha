@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inbox Publik — Yayasan Permata Ar-Ridha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-circle">YA</div>
+        <div>
+          <h1>Yayasan Permata Ar‑Riḍha</h1>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="donasi.html">Donasi & Berita</a>
+        <a href="inbox.html" class="active">Inbox</a>
+        <a href="akun.html">Akun</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Pesan Publik</h2>
+      <p class="lead">Siapa saja bisa menulis pesan yang akan terlihat oleh publik — mirip status di media sosial namun sederhana dan terbuka.</p>
+
+      <form id="statusForm" class="status-form">
+        <label>Nama (tampil publik)
+          <input type="text" id="statusName" placeholder="Nama Anda" required>
+        </label>
+        <label>Pesan
+          <textarea id="statusText" rows="3" placeholder="Tulis pesan untuk semua..." required></textarea>
+        </label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Kirim</button>
+        </div>
+      </form>
+
+      <div class="posts" id="statusContainer"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year4"></span> Yayasan Permata Ar‑Riḍha</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>
